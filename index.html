@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-page-node-id="SwjvpLpjsBhX11JFGoHT3L">
+<head data-page-node-id="OQa82Ro7nfBZqIVBKXuH0B">
+<meta charset="UTF-8" data-page-node-id="kjOo0wWBJioBk4YbsI3Wmq">
+<title>MPU3312 Infographic v2 — Febrie Adriansyah (1920×1080)</title>
+<!--
+  v2 · dark investigative-poster style, case-specific (Febrie Adriansyah, Indonesia 2026)
+  · Gold = gold bars / money trail · dark = investigative poster feel · red = corruption / risk.
+  · Dashed gold boxes = content the group must write themselves (intro / analysis / opinions / references).
+  · All case figures, dates and names below are DRAFT values from press reports, placed for layout only —
+    verify every item against your own sources and cite them in the Self-Declaration Checklist.
+-->
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { background:#0B0A0E; }
+  body { font-family:'Segoe UI','Microsoft YaHei',Arial,sans-serif; color:#F1EBDD; }
+
+  .canvas { position:relative; width:1920px; height:1080px; overflow:hidden;
+            background:#16131A; padding:36px; }
+  .glow { position:absolute; inset:0; pointer-events:none;
+          background:
+            radial-gradient(1100px 420px at 82% -8%, rgba(227,179,65,.10), transparent 70%),
+            radial-gradient(900px 500px at -10% 110%, rgba(214,69,65,.07), transparent 70%); }
+  .wrap { position:relative; z-index:1; display:flex; flex-direction:column; gap:12px; height:1008px; }
+
+  .gold { color:#E3B341; }
+  .red  { color:#E06055; }
+
+  /* ============ HEADER ============ */
+  .hd { height:134px; display:flex; justify-content:space-between; align-items:center; gap:30px; }
+  .kicker { display:flex; align-items:center; gap:10px; font-size:12.5px; font-weight:600;
+            letter-spacing:3.5px; color:#C89B3C; margin-bottom:10px; }
+  .kicker svg { flex:none; }
+  h1 { font-family:'Segoe UI Black','Segoe UI',Arial,sans-serif; font-weight:900; font-size:54px;
+       line-height:1.02; letter-spacing:-1px; color:#F1EBDD; }
+  .titlenote { font-family:'Segoe UI','Microsoft YaHei',sans-serif; font-weight:400; font-size:12.5px;
+               color:#C9B98F; letter-spacing:0; background:rgba(227,179,65,.07);
+               border:1.5px dashed rgba(227,179,65,.45); border-radius:8px; padding:4px 12px;
+               vertical-align:middle; margin-left:14px; white-space:nowrap; }
+  .sub { margin-top:9px; font-size:15px; color:#B9AF9B; }
+  .sub b { color:#E3B341; font-weight:600; }
+  .hd-right { display:flex; flex-direction:column; gap:9px; align-items:flex-end; flex:none; }
+  .chips { display:flex; gap:9px; }
+  .chip { font-size:12px; padding:5px 13px; border-radius:999px; white-space:nowrap; }
+  .chip-line { border:1px solid #4A4350; color:#CFC6B4; }
+  .chip-gold { background:#E3B341; color:#1A1510; font-weight:700; letter-spacing:1px; }
+  .flag { display:flex; padding:0; overflow:hidden; border:1px solid #4A4350; }
+  .flag i { width:17px; height:24px; display:block; }
+  .fl-red { background:#C0392B; } .fl-white { background:#EFEAE0; }
+
+  /* ============ SHARED COMPONENTS ============ */
+  .wt { font-size:10.5px; font-weight:700; color:#E3B341; border:1px solid rgba(227,179,65,.55);
+        padding:2px 9px; border-radius:999px; letter-spacing:.5px; white-space:nowrap; }
+  .p-hd { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .p-hd b { font-size:14px; letter-spacing:2px; color:#F1EBDD; font-weight:800; }
+  .p-note { margin-left:auto; font-size:10.5px; color:#8E8474; font-style:italic; }
+  .panel { background:#201C25; border:1px solid #35303B; border-radius:16px; padding:14px 16px; }
+  .ph { background:rgba(227,179,65,.05); border:1.5px dashed rgba(227,179,65,.42);
+        border-radius:10px; color:#C9B98F; }
+
+  /* ============ STATS ============ */
+  .stats { height:96px; display:flex; gap:12px; }
+  .stat { flex:1; background:#201C25; border:1px solid #35303B; border-radius:14px;
+          display:flex; flex-direction:column; justify-content:center; padding:0 20px; gap:3px;
+          border-bottom:3px solid rgba(227,179,65,.35); }
+  .stat .n { font-family:'Segoe UI Black','Segoe UI',Arial,sans-serif; font-weight:900;
+             font-size:34px; line-height:1; color:#E3B341; letter-spacing:-.5px; }
+  .stat .n em { font-style:normal; font-size:19px; }
+  .stat .l { font-size:11.5px; color:#A99F8C; line-height:1.3; }
+  .stat.iconed { flex-direction:row; align-items:center; gap:14px; }
+
+  /* ============ MAIN ============ */
+  .main { height:396px; display:flex; gap:12px; }
+  .colL { width:1080px; flex:none; display:flex; flex-direction:column; gap:12px; }
+
+  .intro-slot { height:64px; display:flex; align-items:center; gap:12px; padding:0 16px; font-size:12.5px; }
+  .intro-slot b { font-size:13.5px; letter-spacing:2px; color:#F1EBDD; font-weight:800; white-space:nowrap; }
+
+  .flow { flex:1; display:flex; flex-direction:column; }
+  .flowrow { display:flex; align-items:stretch; gap:0; flex:1; }
+  .node { flex:1; background:#262130; border:1px solid #3C3544; border-radius:12px;
+          padding:12px 12px; display:flex; flex-direction:column; gap:7px; }
+  .node.hot { background:#2E2517; border:1.5px solid #E3B341; }
+  .node svg { flex:none; }
+  .node-t { font-size:12.5px; font-weight:800; letter-spacing:.6px; color:#F1EBDD; line-height:1.2; }
+  .node-d { font-size:10.8px; line-height:1.45; color:#B4AA96; }
+  .node-d b { color:#E3B341; font-weight:600; }
+  .arr { width:30px; flex:none; display:flex; align-items:center; justify-content:center;
+         color:#E3B341; font-size:19px; font-weight:700; }
+  .cast { display:flex; align-items:center; gap:10px; margin-top:11px; }
+  .cast-l { font-size:10.5px; font-weight:800; letter-spacing:2px; color:#8E8474; flex:none; }
+  .person { display:flex; align-items:center; gap:8px; font-size:11.3px; color:#D8CFC0;
+            background:#262130; border:1px solid #3C3544; border-radius:999px; padding:5px 12px 5px 5px; }
+  .person i { font-style:normal; width:22px; height:22px; border-radius:50%; background:#E3B341;
+              color:#1A1510; font-weight:800; font-size:10px; display:flex; align-items:center;
+              justify-content:center; flex:none; }
+  .foot { margin-top:9px; font-size:10.5px; color:#8E8474; }
+  .foot b { color:#C9B98F; }
+
+  /* ============ TIMELINE ============ */
+  .tl { flex:1; display:flex; flex-direction:column; }
+  .evs { flex:1; display:flex; flex-direction:column; justify-content:space-between; position:relative; padding-left:2px; }
+  .evs::before { content:''; position:absolute; left:89px; top:10px; bottom:10px; width:2px; background:rgba(227,179,65,.35); }
+  .ev { display:flex; gap:12px; align-items:flex-start; }
+  .tag { width:76px; flex:none; text-align:center; font-size:9.5px; font-weight:800; letter-spacing:1.5px;
+         color:#E3B341; border:1px solid rgba(227,179,65,.5); background:#241E2B;
+         border-radius:6px; padding:3px 0; margin-top:1px; }
+  .dot { width:11px; height:11px; border-radius:50%; background:#16131A; border:3px solid #E3B341;
+         flex:none; margin-top:4px; margin-left:0; z-index:1; }
+  .ev:last-child .dot { background:#E3B341; }
+  .ev-b { font-size:11.6px; line-height:1.4; color:#CFC6B4; }
+  .ev-b b { color:#E3B341; font-weight:700; margin-right:4px; }
+
+  /* ============ ANALYSIS ============ */
+  .an { height:168px; display:flex; flex-direction:column; }
+  .sec { display:flex; align-items:center; gap:10px; height:22px; margin-bottom:9px; }
+  .sec b { font-size:14px; letter-spacing:2px; font-weight:800; }
+  .sec-note { font-size:11px; color:#C9B98F; }
+  .an-row { flex:1; display:flex; gap:12px; }
+  .an-card { flex:1; background:#201C25; border:1px solid #35303B; border-radius:14px; padding:12px 14px;
+             display:flex; flex-direction:column; gap:8px; }
+  .an-card.a1 { border-top:4px solid #D64541; }
+  .an-card.a2 { border-top:4px solid #E3B341; }
+  .an-card.a3 { border-top:4px solid #7FA6C9; }
+  .an-t { font-size:13.5px; font-weight:800; letter-spacing:1px; }
+  .an-t span { font-weight:400; font-size:11px; color:#8E8474; margin-left:6px; letter-spacing:0; }
+  .an-card .ph { flex:1; font-size:11.8px; line-height:1.45; padding:8px 12px; display:flex; align-items:center; }
+
+  /* ============ OPINIONS ============ */
+  .op { height:124px; display:flex; flex-direction:column; }
+  .op-row { flex:1; display:flex; gap:10px; }
+  .op-card { flex:1; background:#201C25; border:1px solid #35303B; border-top:3px solid #E3B341;
+             border-radius:12px; padding:10px 11px; display:flex; flex-direction:column; gap:7px; }
+  .op-top { display:flex; align-items:center; gap:7px; }
+  .op-n { background:#E3B341; color:#1A1510; font-size:10px; font-weight:800; padding:3px 8px;
+          border-radius:5px; letter-spacing:.5px; }
+  .op-name { font-size:10.5px; padding:3px 9px; flex:1; }
+  .op-card .ph { flex:1; font-size:10.8px; line-height:1.4; padding:6px 9px; display:flex; align-items:center; }
+
+  /* ============ FOOTER ============ */
+  .ft { height:30px; display:flex; align-items:center; gap:9px; }
+  .ft-label { font-size:11.5px; font-weight:800; letter-spacing:2px; color:#E3B341; flex:none; }
+  .ref { font-size:10.5px; padding:4px 11px; white-space:nowrap; }
+  .ft-note { margin-left:auto; font-size:10px; color:#8E8474; text-align:right; line-height:1.25; }
+</style>
+</head>
+<body data-page-node-id="1u4Y6fxgfH5eZgSX8eAr8n">
+<div class="canvas" data-page-node-id="n6N05W2sY7gGCGZiDDnsCU">
+  <div class="glow" data-page-node-id="r4SmOgKXKAqKMDIgFTL6GI"></div>
+  <div class="wrap" data-page-node-id="HXtwoAoKAmhBJ8UY9etlQ7">
+
+    <!-- ================= HEADER ================= -->
+    <header class="hd" data-page-node-id="Ye9UzrFzUwUEAhv9lh3kmr">
+      <div data-page-node-id="3fCfGmvTcWt62Jf7GsJkvz">
+        <div class="kicker" data-page-node-id="ydZVS9bh3GIH021mtEySnb">
+          <svg width="26" height="26" viewBox="0 0 200 200" fill="none" stroke="#E3B341" stroke-width="9" stroke-linecap="round" data-page-node-id="FBE6lCeDYXE0W77h8ZFbWy">
+            <line x1="100" y1="22" x2="100" y2="168" data-page-node-id="rQLKMwu2l9XZjggfNFVPbJ"/><circle cx="100" cy="18" r="8" data-page-node-id="zjHEvgYbVONDIVagzSIn5b"/>
+            <line x1="32" y1="42" x2="168" y2="42" data-page-node-id="u5GH3ys8YMm7NKYYglbiA4"/>
+            <path d="M32 42 L15 86 M32 42 L49 86 M15 86 A17 17 0 0 0 49 86" data-page-node-id="Uggg3EE6Ip9xjeAwb4ZRDK"/>
+            <path d="M168 42 L151 86 M168 42 L185 86 M151 86 A17 17 0 0 0 185 86" data-page-node-id="hT50MgBSVWOjev4gdOFFKP"/>
+            <line x1="58" y1="176" x2="142" y2="176" data-page-node-id="lIWCHhtBgzdA6lDF6D3WfW"/>
+          </svg>
+          MPU3312 · INTEGRITY AND ANTI-CORRUPTION · CASE INFOGRAPHIC
+        </div>
+        <h1 data-page-node-id="1hnvF0a2C5hJNlAvOln6LC">THE PROSECUTOR <span class="gold" data-page-node-id="hkLiPFBBJBrEEEA4pr7qQl">IN THE DOCK</span><span class="titlenote" data-page-node-id="aKhoQdbHqzLuoSaCHUKZ2K">✎ draft title — replace with your own wording</span></h1>
+        <div class="sub" data-page-node-id="wPR8D9y2IWZw9VqsOC9zTh">Febrie Adriansyah, Indonesia's former chief of special-crimes prosecution — <b data-page-node-id="NE7urBNymrvbpWpCAO72kA">74 kg of gold</b> in a wall-hidden safe, <b data-page-node-id="yfXvve516IKpyqGQ7wgjCN">Rp 476 billion</b> in cash, and a question that shook the Attorney General's Office.</div>
+      </div>
+      <div class="hd-right" data-page-node-id="VrFHeYLgGMyEQDEzqeXMbz">
+        <div class="chips" data-page-node-id="cPn6701g6x5dP4gIRD4haz">
+          <span class="chip flag" data-page-node-id="mDJ77xBBJIt7tUQnMOdDuA"><i class="fl-red" data-page-node-id="dStu7OuC99kVs4nu7UC12H"></i><i class="fl-white" data-page-node-id="bX22VXRcYeoEjTbMWZo8Te"></i></span>
+          <span class="chip chip-gold" data-page-node-id="kYCOsEm0EfyixM4dz7CH5d">INDONESIA · 2026</span>
+          <span class="chip chip-line" data-page-node-id="jggjRbQOMrItDUXEq20dLJ">Group ___ · Members ___</span>
+        </div>
+        <div class="chips" data-page-node-id="GC3xlr6mckoCL4JFqDavAV">
+          <span class="chip chip-line" data-page-node-id="2H0piw252tvatrUAjwp262">Case: corruption &amp; money laundering (TPPU)</span>
+          <span class="chip chip-line" data-page-node-id="yCX9B4yAllHrV3DYbwTXFU">1920 × 1080 · PNG</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO STATS ================= -->
+    <div class="stats" data-page-node-id="yx0G4BeehRJMDyuzVtvMI4">
+      <div class="stat iconed" data-page-node-id="7AgZkD0hoDGPY3QCTZIgmV">
+        <svg width="46" height="40" viewBox="0 0 60 52" data-page-node-id="SzhimFsht7ZY3yezFIUIyF">
+          <defs data-page-node-id="3ymctiaykeTkzSq8tb4Uvc"><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1" data-page-node-id="pBzLSCw8QEu8Ji1rsmfE8H">
+            <stop offset="0" stop-color="#F0C75E" data-page-node-id="h73501omUMUBuF43tkdSdy"/><stop offset="1" stop-color="#B8862E" data-page-node-id="U1JeFqyuAAu5ibhoYb4AMs"/>
+          </linearGradient></defs>
+          <g stroke="#8C6A1F" stroke-width="1.5" data-page-node-id="2MKaBBJu0I8HwlTgHEQl6G">
+            <path d="M12 34 L20 22 L40 22 L48 34 Z" fill="url(#gb)" data-page-node-id="CnvH1AGX1dU5piUbAbaeEY"/>
+            <path d="M18 48 L26 36 L46 36 L54 48 Z" fill="url(#gb)" transform="translate(-14,0)" data-page-node-id="pnTNqRvJGylEGStYHsG4rP"/>
+            <path d="M18 48 L26 36 L46 36 L54 48 Z" fill="url(#gb)" transform="translate(4,0)" data-page-node-id="A6w41mIG0gsdvkZgtfJzu2"/>
+          </g>
+        </svg>
+        <div data-page-node-id="EvnW2zn8IHS9CCDBfBHjN8"><div class="n" data-page-node-id="ShtVmO2lguK8CwFoCKS1Ev">74 <em data-page-node-id="5Y2CvgXAF6IgzoOU3FxsUL">kg</em></div><div class="l" data-page-node-id="e5bGsVEEh972VG2IHJd1s0">of gold bars — found in a safe hidden behind a wooden wall, Sentul, Bogor</div></div>
+      </div>
+      <div class="stat" data-page-node-id="zpNF9yzooWEo39pWgXJpop">
+        <div class="n" data-page-node-id="CSOGWlvRQ99j9DjvqGf2Mb">Rp 476 <em data-page-node-id="VpTP1jGrLH3wro4q5FdAY2">bn</em></div>
+        <div class="l" data-page-node-id="y4BIujhmIXQaPRGNFqE4Qs">≈ US$29M in cash, multiple currencies, seized in the July 2026 raids</div>
+      </div>
+      <div class="stat" data-page-node-id="UCSLiUffCb8g8vSUIPCQsE">
+        <div class="n" data-page-node-id="ZpxEnJ3k5pvX5LyAQe3OBw">3</div>
+        <div class="l" data-page-node-id="qOw6eK2PhbqM6CdYRVbnGt">suspects — a top prosecutor, his lawyer &amp; a businessman</div>
+      </div>
+      <div class="stat" data-page-node-id="fL1xuiAIvcVBVgkofLhb8n">
+        <div class="n" data-page-node-id="dqaPlTNaf1MPIAGlQ4Wxuf">26+</div>
+        <div class="l" data-page-node-id="pRaQItwp05umeHM7BK1PMs">witnesses questioned; probe led by 9 senior prosecutors ("Team Nine")</div>
+      </div>
+    </div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="main" data-page-node-id="goRTnH9YF9ArIDR4gucnsG">
+      <div class="colL" data-page-node-id="UQQin1p1aQJZUI4HlmoRie">
+
+        <div class="ph intro-slot" data-page-node-id="9DSEoyum1utDkGfwxy6Wx3">
+          <b data-page-node-id="0l0qsNGYCFa9YG5RvT3U2o">01 · INTRODUCTION</b><span class="wt" data-page-node-id="tsaDHSS2re97EXBWg5q41t">10%</span>
+          <span data-page-node-id="wKi3CcFJJH4TSaJoFuIjTn">✎ Why this case? — its significance + what connects it to your group, in 2–3 lines of your own words</span>
+        </div>
+
+        <div class="panel flow" data-page-node-id="AQJ881rFOTpImBH12QP0nJ">
+          <div class="p-hd" data-page-node-id="618F4CexqULxW2HDrwoHO5">
+            <b data-page-node-id="sIZ1wk6BkqHEOzsotmDRQp">02 · CASE OVERVIEW</b><span class="wt" data-page-node-id="3pJrvnGnMnQIR0UKWtKBar">50% · PART 1</span>
+            <span class="p-note" data-page-node-id="NMoyNOIODXsqVMa3vKXFwL">draft facts for layout — rewrite in your own words &amp; verify every item</span>
+          </div>
+          <div class="flowrow" data-page-node-id="ZMATdtBBHCcToqHzzB1kJK">
+            <div class="node" data-page-node-id="207gDXQq1HVaMxoWzeECz8">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E3B341" stroke-width="1.8" stroke-linecap="round" data-page-node-id="Rxng1SkInudlVTDRFfu5bd">
+                <path d="M3 21h18M4 21V9m4 12V9m4 12V9m4 12V9m4 12V9M2 9l10-6 10 6H2z" data-page-node-id="mdfBZC3GNNVNWFByEZgCA6"/>
+              </svg>
+              <div class="node-t" data-page-node-id="g2ACaLdczCFcHLqdI1QNEQ">THE STATE INSURERS</div>
+              <div class="node-d" data-page-node-id="Irimo7rpjcj3dve3W463R9"><b data-page-node-id="pXhOnLNmtzmDsBGyTbE8e0">PT ASABRI</b> (armed forces) &amp; <b data-page-node-id="tDrQaPTXDiZQBgepAPW13A">PT Jiwasraya</b> — multi-trillion-rupiah graft cases, 2020–2025</div>
+            </div>
+            <div class="arr" data-page-node-id="RrafWNM4CHiVNVMvcGBaYJ">➜</div>
+            <div class="node" data-page-node-id="sioKvdvdBhxuMkb2OQ2gk8">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E3B341" stroke-width="1.8" stroke-linecap="round" data-page-node-id="BeGjz0zqyJoL5EKPEEf9aC">
+                <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" data-page-node-id="D3KidXHmbXHpZ7H5yPX3dr"/><path d="M14 3v6h6" data-page-node-id="0JWhaYhIyB6M2pYbSIfVA9"/><path d="M9 13h6M9 17h6" data-page-node-id="ER1YdDCKfbw1tXCtH1bEXE"/>
+              </svg>
+              <div class="node-t" data-page-node-id="QfeCXjs9oRqc8ZoJGnRYtU">THE PROSECUTOR'S DESK</div>
+              <div class="node-d" data-page-node-id="HSjA8nut8tMBcViOEO2Etp">Cases passed through FA's <b data-page-node-id="4Xho3xYd4s4pc4mevIJUdC">Special Crimes Division</b> — alleged extortion &amp; case-fixing (Art. 12, Anti-Corruption Law)</div>
+            </div>
+            <div class="arr" data-page-node-id="Os00FRNE9J88jCqCLFJNYk">➜</div>
+            <div class="node" data-page-node-id="VHxFMHKp3ycQUoE6xy7KNx">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E3B341" stroke-width="1.8" stroke-linecap="round" data-page-node-id="1Tr13KE7XKBHPXvxXB2Bq4">
+                <path d="M17 2l4 4-4 4" data-page-node-id="C5JLOl440yvYrGByw8uBU3"/><path d="M3 11v-1a4 4 0 0 1 4-4h14" data-page-node-id="Kp8OjgpO2taEmnOLGrB01c"/><path d="M7 22l-4-4 4-4" data-page-node-id="k2HGtLbgXpGkCh6RoOPYt2"/><path d="M21 13v1a4 4 0 0 1-4 4H3" data-page-node-id="jxtWvFXyyGKJVReNRufz47"/>
+              </svg>
+              <div class="node-t" data-page-node-id="WdShnP9zv9rcSsjwPTB7gy">THE LAUNDERING WEB</div>
+              <div class="node-d" data-page-node-id="cF93MllKrHtKfkZqLnP3a9">A lawyer &amp; businessmen channel proceeds — <b data-page-node-id="9HRmUpDUVjCxVZIST3cKX2">7 companies</b> named, cash · gold · forex</div>
+            </div>
+            <div class="arr" data-page-node-id="BaiMCECcN4AWXz628PeaBr">➜</div>
+            <div class="node hot" data-page-node-id="Vmxb81PKeZJEjpCLBU2ICY">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E3B341" stroke-width="1.8" stroke-linecap="round" data-page-node-id="o1BAZuPK5DXcyxUVJwkf46">
+                <rect x="3" y="4" width="18" height="16" rx="2" data-page-node-id="FNZAFJvsN6x18e3bV6JFZs"/><circle cx="12" cy="12" r="3.5" data-page-node-id="gmjoTbzyWPuS0NFVvDDWpy"/><path d="M12 8.5v1M12 14.5v1M8.5 12h1M14.5 12h1" data-page-node-id="nyEuGuJdN71TJ6AoKZGGZi"/>
+              </svg>
+              <div class="node-t" data-page-node-id="on9ZfDgWNNx7J8Yi4mP8M8">THE SAFE IN SENTUL</div>
+              <div class="node-d" data-page-node-id="TpEcoO7lTtDnw92HKnXK63">Hidden behind a wooden wall: <b data-page-node-id="IOWCs6T9dSmR0eml8xfidK">74 kg of gold</b> + <b data-page-node-id="zD8BcsdJLupkofzfEbG56B">Rp 476 bn</b> in currencies — the raid that started it all</div>
+            </div>
+          </div>
+          <div class="cast" data-page-node-id="AUdi7v2gSXxPT4dLkKAFRn">
+            <span class="cast-l" data-page-node-id="0NADesF2EH5pCGAtSpJkPp">THE CAST</span>
+            <span class="person" data-page-node-id="NjzFpE1yZvLhZcQxHuEJDL"><i data-page-node-id="hVgblanMUTDatqxjLnuTmx">FA</i> Febrie Adriansyah — ex-Jampidsus (Deputy AGO for Special Crimes)</span>
+            <span class="person" data-page-node-id="Wvt8eD563LxMrnFoY5EMns"><i data-page-node-id="r9QdFKsGuGG033ppoAexxF">DR</i> Don Ritto — private lawyer</span>
+            <span class="person" data-page-node-id="TLGjGZO6gmXwGHrroRdjxC"><i data-page-node-id="swuLGH1DFEt0GOXP5cqOs5">NH</i> Nurman Herin — businessman, Jambi</span>
+          </div>
+          <div class="foot" data-page-node-id="cCvMjEW2C6MRe8WgCxrSvZ">⚠ <b data-page-node-id="MdN1Dild7SgdpdQrboowBC">Draft timeline &amp; figures from press reports</b> — re-verify each item with your own sources; cite them in the Self-Declaration Checklist.</div>
+        </div>
+      </div>
+
+      <div class="panel tl" data-page-node-id="NZM3CNP42oLUNHxoRFuaAR">
+        <div class="p-hd" data-page-node-id="1ageedg5y4sFEH6kpys2vH"><b data-page-node-id="EnmMNEHbdHzSTedjaXBpBR">TIMELINE · JUL → SEP 2026</b></div>
+        <div class="evs" data-page-node-id="tcjJJMptkRAlaOJDHHJxxU">
+          <div class="ev" data-page-node-id="sv9X2J9EZAbUQ1e4Z7odqE"><span class="tag" data-page-node-id="CT617jNdTSTyNXhKME49Sx">RAID</span><span class="dot" data-page-node-id="J3oDPeVUeThmJIbjGTBieO"></span><div class="ev-b" data-page-node-id="kpRgIfFEOENAZxSroi0BWD"><b data-page-node-id="uohaj347dthycVGmEr0e0m">~10 Jul</b> Police raid FA's Sentul home — safe behind a wooden wall yields <b data-page-node-id="Q35DGH4CezFXsz9GUr5VrL">74 kg gold + ≈Rp 476 bn</b> cash; FA resigns as Jampidsus</div></div>
+          <div class="ev" data-page-node-id="shvFriWzWshUjRIurltVRd"><span class="tag" data-page-node-id="llMqbploZPwnxjchvI7FNr">NAMED</span><span class="dot" data-page-node-id="fuDRYjFJxsnzp3yBh3j6Rb"></span><div class="ev-b" data-page-node-id="0e4gVuOLc3IjH9df5Eg1bb"><b data-page-node-id="BFXtmjHlcUmwI0TvQJtHco">11 Jul</b> Police name FA &amp; lawyer "DR" suspects in corruption &amp; money laundering</div></div>
+          <div class="ev" data-page-node-id="qFC3dAMagsXD1VQxKYjmGQ"><span class="tag" data-page-node-id="2TIcAgNo4OA4I72A5uTq6M">TRANSFER</span><span class="dot" data-page-node-id="W2SV3Rn2dx5Y0CcUHWqHYf"></span><div class="ev-b" data-page-node-id="54Wfpyua6WMI0srjvT3T1o"><b data-page-node-id="PDfM5SfLPsDS1agZFXpydf">11–20 Jul</b> Three case files handed from Police to the <b data-page-node-id="C10p5UyNvVCrNXN2QWsf8E">AGO</b>; investigation order (Sprindik) issued</div></div>
+          <div class="ev" data-page-node-id="0YqQBureDELsLFdh8kRmNT"><span class="tag" data-page-node-id="EyFFhgKGyAiivVkQiICTsZ">TEAM NINE</span><span class="dot" data-page-node-id="B5ZptmOaXNdHHt2MZHxjlC"></span><div class="ev-b" data-page-node-id="GKhGxk9K4xtxkCgPWDQWOv"><b data-page-node-id="lNvtv13LYg2laz5CQsvYFU">Late Jul</b> AGO forms <b data-page-node-id="me3QwN436NVRAxOQyCI0SV">Team Nine</b> — 9 senior prosecutors investigate their own former chief</div></div>
+          <div class="ev" data-page-node-id="CzRXEhCMlEFkpLY53aXxDC"><span class="tag" data-page-node-id="59iXQFnJyzEADG1oJ0Sphf">SUSPENDED</span><span class="dot" data-page-node-id="dCM2SoOKtCDTrR8EZRrVXJ"></span><div class="ev-b" data-page-node-id="eTHz2YxZu1qx3s0WKjFFCf"><b data-page-node-id="3nVlG73DFpiPTbr7XwfhhA">31 Jul</b> AGO suspends FA retroactively, stripping his prosecutorial status</div></div>
+          <div class="ev" data-page-node-id="LwFY1JApKo04nIWnOo0hbz"><span class="tag" data-page-node-id="xuHc52eVcSzj852zCX8fMW">PRETRIAL</span><span class="dot" data-page-node-id="ybB4y9uibCyuUTCVzRssSE"></span><div class="ev-b" data-page-node-id="Z3Z7c7WoqNXyDGbnU8Jzga"><b data-page-node-id="NCs00T9iFEa6qqjipZkXeb">5–19 Aug</b> FA files pretrial motions (South Jakarta District Court) claiming procedural violations</div></div>
+          <div class="ev" data-page-node-id="koM6AbAgHcUGbPGLsjgiXg"><span class="tag" data-page-node-id="hRnFOsfD0VPJnWtHA1vcSa">PROSECUTION</span><span class="dot" data-page-node-id="uWsdgqzYLwlq2jVpcQRHsx"></span><div class="ev-b" data-page-node-id="J6CcZV3QcGOEiPTshaTJOf"><b data-page-node-id="REUxCWScSAs5SzG0Kf7K2y">15 Sep</b> AGO · Police · KPK joint meeting — case declared ready to <b data-page-node-id="m7moVpZYoqjEWMHhKp0PMV">enter prosecution</b></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= ANALYSIS ================= -->
+    <div class="an" data-page-node-id="atD2YH3EReBf7Zq8IHZKTk">
+      <div class="sec" data-page-node-id="LioYCnKLddvO6vH5DmJo13">
+        <b data-page-node-id="66Z97PXOpFB3158pmHtRR3">03 · ANALYSIS</b><span class="wt" data-page-node-id="hR4MkJv4jroK46XmCduNKn">50% · PART 2</span>
+        <span class="sec-note" data-page-node-id="wEzuI7HLiuDlx7h2WTSxpl">✎ Write your own analysis in these three cards — 2–4 bullet points each</span>
+      </div>
+      <div class="an-row" data-page-node-id="osdg68SFQuI94CsrifphbK">
+        <div class="an-card a1" data-page-node-id="YzsK4TSyp1xfZA1OcGUHYC">
+          <div class="an-t" data-page-node-id="qfmj6yYBd19WTNtYE096fC">CAUSES</div>
+          <div class="ph" data-page-node-id="IU5txLHFRPYhvmre3PMcKP">✎ How was this possible — systemic gaps / weak oversight / motive &amp; opportunity (your analysis here)</div>
+        </div>
+        <div class="an-card a2" data-page-node-id="NzxZBJIDzLIyNCOYzGfC6F">
+          <div class="an-t" data-page-node-id="UwdH1y2ryQRTur0LWtdyBe">IMPACTS</div>
+          <div class="ph" data-page-node-id="3hc9ELGwv6hIVcAwmE3CSj">✎ The cost to society / the economy / trust in justice (your analysis here)</div>
+        </div>
+        <div class="an-card a3" data-page-node-id="vsof6dZcuVux5EgR9TaGxy">
+          <div class="an-t" data-page-node-id="Xrq5S550jfsDeRQmPGv5CP">PROCEEDINGS &amp; REFORMS</div>
+          <div class="ph" data-page-node-id="AmiJ6IOtNf4jSWX17UncB2">✎ Legal developments, likely outcomes, and reforms set in motion (your analysis here)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= OPINIONS ================= -->
+    <div class="op" data-page-node-id="ran3TNUC3LUSFmBNAu52A7">
+      <div class="sec" data-page-node-id="4jRGUAwmeMq67twxXzPPxT">
+        <b data-page-node-id="wqhlQ0lP7UdIFsa0AT946v">04 · PERSONAL OPINIONS</b><span class="wt" data-page-node-id="kOqyvKU79ivhxtvyVQ9Pdc">30%</span>
+        <span class="sec-note" data-page-node-id="43KVBE2fmuAFEA3uQ7B2Il">✎ One signed entry per member — ethical reflection / societal consequence / preventive measures</span>
+      </div>
+      <div class="op-row" data-page-node-id="6b5l5Ot4wRbvUu2P5oOSRS">
+        <div class="op-card" data-page-node-id="t1gln3m8MLuyT5GHdCECMD"><div class="op-top" data-page-node-id="6KBTCaFFDFddSFlbzJZ1me"><span class="op-n" data-page-node-id="chotsXtBkRh6RrvnC11fZe">MEMBER 1</span><span class="ph op-name" data-page-node-id="wwAYasxHFq8U9fZVuPvpfP">Name · Student ID</span></div><div class="ph" data-page-node-id="o4a0UabTgGe7d0XmOmgS87">✎ Your opinion, in your own words (2–3 sentences)</div></div>
+        <div class="op-card" data-page-node-id="4WVuKOQVTXAhVBUQEhUDKs"><div class="op-top" data-page-node-id="0Ud3M4kb0CJoYpCGern42h"><span class="op-n" data-page-node-id="MCqyg6Vy0QhHImSB5wQ9HR">MEMBER 2</span><span class="ph op-name" data-page-node-id="x5BsvgHuilTEk2CTAt9KAS">Name · Student ID</span></div><div class="ph" data-page-node-id="GPaLepur9gB9RcCdVi2gD4">✎ Your opinion</div></div>
+        <div class="op-card" data-page-node-id="VwrOifVqBwcBCyjoViUHg4"><div class="op-top" data-page-node-id="7DJAAIjiXd5wcgw6lLh8X9"><span class="op-n" data-page-node-id="LljVEx1YwcCUmbKYrOuEjs">MEMBER 3</span><span class="ph op-name" data-page-node-id="MFzhadpxmt73XtG8yrAXQl">Name · Student ID</span></div><div class="ph" data-page-node-id="XZmy8Dd9TR6ewp9w3CkN69">✎ Your opinion</div></div>
+        <div class="op-card" data-page-node-id="YMRCKvC8yM8V2xmw7s2JLh"><div class="op-top" data-page-node-id="1o9WBav5miH7zh8pkvtT59"><span class="op-n" data-page-node-id="QfBBQ9snyBIQmQCUNYfMRc">MEMBER 4</span><span class="ph op-name" data-page-node-id="6M263b8viBGwbcJp6roY9u">Name · Student ID</span></div><div class="ph" data-page-node-id="zbMQaQHgKkqN51lWb2H6EF">✎ Your opinion</div></div>
+        <div class="op-card" data-page-node-id="4xA92vEASEtsJMHDgyeTRR"><div class="op-top" data-page-node-id="lHozD3sjzbAn52Om9gaQLz"><span class="op-n" data-page-node-id="hcJVKwSVO7ZnFCiO2n36CM">MEMBER 5</span><span class="ph op-name" data-page-node-id="LKq58KR1Rck3nF2ZHDxWOf">Name · Student ID</span></div><div class="ph" data-page-node-id="ZuHpPb4GkjVfOSRlkpjGIw">✎ Your opinion</div></div>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="ft" data-page-node-id="AZHFcKvMwCGNH8D5O4ofZB">
+      <span class="ft-label" data-page-node-id="OESxnqZrWfOJ6VnRSc6HOv">REFERENCES</span>
+      <span class="ph ref" data-page-node-id="xwNll5fNBZbFf2XoTISC3e">1 · ANTARA (2026) — URL ✎</span>
+      <span class="ph ref" data-page-node-id="vhJ32FVLGGboyruclVabPe">2 · Tempo (2026) — URL ✎</span>
+      <span class="ph ref" data-page-node-id="3VuFapAqsQoAm2vVoQXSb9">3 · The Jakarta Post (2026) — URL ✎</span>
+      <span class="ph ref" data-page-node-id="dw1GQnY9Yvde5p0Zq01XQA">4 · your own sources ✎</span>
+      <span class="ft-note" data-page-node-id="EY5jO551ZlkGment7ASAN2">Draft case facts from press reports — verify before submission · Layout &amp; graphics: AI-assisted (declare in checklist)<br data-page-node-id="iHr5YOt5mESOyTiDF4ehJP">Written content (intro · analysis · opinions): the group's own work</span>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
